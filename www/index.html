@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Hello wasm-pack!</title>
+    <title>wasm-game-of-life</title>
   </head>
   <body>
     <noscript
@@ -12,9 +12,10 @@
     <div class="button-container">
       <button id="play-pause">Play</button>
       <button id="clear">Clear</button>
-      <input type="range" id="speed" min="1" max="60" value="30">Speed</input>
+      <input type="range" id="speed" min="1" max="60" value="30" />
     </div>
     <pre id="game-of-life-canvas"></pre>
+    <div id="fps">fps -</div>
     <script src="./bootstrap.js"></script>
   </body>
   <style>
@@ -30,8 +31,10 @@
       justify-content: center;
     }
     pre {
-      font-size: 20px;
-      line-height: 0.6;
+      color: midnightblue;
+      font-size: 18px;
+      line-height: 8px;
+      letter-spacing: -2.85px;
       margin: 0;
       cursor: pointer;
       user-select: none;
@@ -44,10 +47,17 @@
       width: 6em;
       height: 2.6em;
       line-height: 2.5em;
-      border: 2px solid black;
+      border: 2px solid navy;
+      font-family: monospace;
     }
-    input {
-      color: black;
+    button:hover,
+    button:focus {
+      cursor: pointer;
+    }
+    #fps {
+      color: navy;
+      font-family: monospace;
+      margin-top: 4px;
     }
   </style>
 </html>
