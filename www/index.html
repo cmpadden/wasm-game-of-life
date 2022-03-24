@@ -9,6 +9,11 @@
       >This page contains webassembly and javascript content, please enable
       javascript in your browser.</noscript
     >
+    <div class="button-container">
+      <button id="play-pause">Play</button>
+      <button id="clear">Clear</button>
+      <input type="range" id="speed" min="1" max="60" value="30">Speed</input>
+    </div>
     <pre id="game-of-life-canvas"></pre>
     <script src="./bootstrap.js"></script>
   </body>
@@ -26,8 +31,23 @@
     }
     pre {
       font-size: 20px;
-      line-height: 0.60;
+      line-height: 0.6;
       margin: 0;
+      cursor: pointer;
+      user-select: none;
+    }
+    .button-container {
+      text-align: center;
+      margin-bottom: 0.65rem;
+    }
+    button {
+      width: 6em;
+      height: 2.6em;
+      line-height: 2.5em;
+      border: 2px solid black;
+    }
+    input {
+      color: black;
     }
   </style>
 </html>
